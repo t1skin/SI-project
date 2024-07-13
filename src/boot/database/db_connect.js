@@ -1,6 +1,10 @@
 const pg = require("pg");
 const logger = require("../../middleware/winston");
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`
+});
+
 const db_config = {
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
