@@ -6,7 +6,8 @@
   "scripts": {
     "start:dev": "nodemon src/index.js",
     "prepare": "husky",
-    "lint": "eslint . --ext .js --fix",
+    "lint": "eslint . --ext .ts --max-warnings 0",
+    "lint:fix": "eslint . --ext .ts --max-warnings 0 --fix",
     "test": "echo 'running tests'",
     "build": "echo 'building app'"
   },
